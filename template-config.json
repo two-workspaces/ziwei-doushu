@@ -1,0 +1,50 @@
+{
+  "services": {
+    "3a4d83bf-f2f6-49f3-992a-98bd4e8bf5ea": {
+      "icon": "https://raw.githubusercontent.com/two-workspaces/ziwei-doushu/main/icon.svg",
+      "name": "ziwei-doushu",
+      "deploy": {
+        "startCommand": null,
+        "healthcheckPath": "/",
+        "restartPolicyType": "ON_FAILURE",
+        "restartPolicyMaxRetries": 10
+      },
+      "source": {
+        "image": "ghcr.io/two-workspaces/ziwei-doushu:PENDING"
+      },
+      "variables": {
+        "AI_API_KEY": {
+          "defaultValue": "",
+          "description": "Optional. An OpenAI-compatible API key (DeepSeek by default) turns on AI readings. Empty = charts only.",
+          "isOptional": true
+        },
+        "AI_BASE_URL": {
+          "defaultValue": "https://api.deepseek.com",
+          "description": "OpenAI-compatible API base URL. OpenAI: https://api.openai.com/v1, OpenRouter: https://openrouter.ai/api/v1",
+          "isOptional": false
+        },
+        "AI_MODEL": {
+          "defaultValue": "deepseek-flash",
+          "description": "Model name at that API, e.g. gpt-5-mini on OpenAI or deepseek/deepseek-v4-flash on OpenRouter",
+          "isOptional": false
+        },
+        "AI_REQUESTS_PER_HOUR": {
+          "defaultValue": "30",
+          "description": "AI requests allowed per visitor IP per hour, so a public site can't drain your key. 0 = no limit",
+          "isOptional": false
+        },
+        "PORT": {
+          "defaultValue": "3000",
+          "description": "Port the site listens on. Leave as is.",
+          "isOptional": false
+        }
+      },
+      "networking": {
+        "serviceDomains": {
+          "<hasDomain>": {}
+        },
+        "tcpProxies": {}
+      }
+    }
+  }
+}
