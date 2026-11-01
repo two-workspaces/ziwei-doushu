@@ -1,9 +1,11 @@
 {
-  "name": "Zi Wei Dou Shu 紫微斗数 | Purple Star Astrology with AI Readings",
+  "name": "Zi Wei Dou Shu \u7d2b\u5fae\u6597\u6570 | Purple Star Astrology with AI Readings",
   "short_name": "Ziwei Doushu",
-  "description": "Zi Wei Dou Shu (紫微斗数) charts, classics and AI readings",
+  "description": "Zi Wei Dou Shu (\u7d2b\u5fae\u6597\u6570) charts, classics and AI readings",
   "category": "Other",
   "image": "https://raw.githubusercontent.com/two-workspaces/ziwei-doushu/main/icon.svg",
   "card_desc": "Your own Zi Wei Dou Shu (Purple Star Astrology) site on the open-source Ni Haixia charting engine: twelve-palace charts with true solar time, compatibility charts, a classics library, and AI readings from any OpenAI-compatible model.",
-  "deploy_marker": "two-workspaces/ziwei-doushu"
+  "deploy_marker": "two-workspaces/ziwei-doushu",
+  "id": "c085ee6c-2248-4257-a4f3-2b25500cd4cf",
+  "published": true
 }

@@ -10,7 +10,7 @@
         "restartPolicyMaxRetries": 10
       },
       "source": {
-        "image": "ghcr.io/two-workspaces/ziwei-doushu:PENDING"
+        "image": "ghcr.io/two-workspaces/ziwei-doushu:af234f3"
       },
       "variables": {
         "AI_API_KEY": {
