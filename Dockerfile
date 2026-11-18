@@ -1,4 +1,4 @@
-FROM node:24.22.2-alpine3.24 AS build
+FROM node:24.22.3-alpine3.24 AS build
 # Upstream has no app releases (its GitHub releases are dataset drops), so pin a
 # commit and bump it deliberately.
 ARG ZIWEI_COMMIT=495b79ecb3524b20b2edc026067d7d0b0f407319
@@ -16,7 +16,7 @@ RUN npm ci --no-audit --no-fund
 # domain when the container starts (railway-entrypoint.sh).
 RUN NEXT_PUBLIC_SITE_URL=https://ziwei-site-url.invalid NEXT_TELEMETRY_DISABLED=1 npm run build
 
-FROM node:24.22.2-alpine3.24
+FROM node:24.22.3-alpine3.24
 WORKDIR /app
 # sed -i in the entrypoint writes temp files next to server.js.
 RUN chown node:node /app
